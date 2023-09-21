@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Text Editor</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .editor {
+      width: 70%;
+      height: 300px;
+      border: 3px solid rgba(0, 0, 0, 0.281);
+      background-color: rgba(144, 0, 255, 0.183);
+      margin-left: 200px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 20px;
+    }
+    /* .hero-img{
+    width: 80%;
+    border-radius: 13px;
+} */
+  </style>
+</head>
+<body>
+    <body style="background: url(https://source.unsplash.com/1600x800/?white)">
+  <h1>Simple Text Editor</h1>
+  <textarea id="editor" class="editor" ></textarea>
+
+  <!-- <img src="http://source.unsplash.com/1600x800/?software" class="hero-img" alt=""> -->
+  <script>
+    // Get the text editor element
+    const editor = document.getElementById("editor");
+
+    // Add a listener for the "keyup" event on the text editor
+    editor.addEventListener("keyup", function() {
+      // Get the current value of the text editor
+      const text = editor.value;
+
+      // Update the text in the preview element
+      document.getElementById("preview").innerHTML = text;
+    });
+  </script>
+
+  <h2 id="preview">Preview</h2>
+</body>
+</html>
